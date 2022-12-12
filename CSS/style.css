@@ -1,0 +1,263 @@
+/* CSS Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CSS Variables */
+:root {
+    --navbar-height: 100px;
+}
+
+/* Navigation Bar */
+#navbar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+
+    /* just to stay safe */
+    top: 0px;
+}
+
+/* Navigation Bar: Logo and Image */
+#logo {
+    margin: 3px 14px;
+}
+
+#logo img {
+    height: 100px;
+    margin: 5px 14px;
+}
+
+/* Navigation Bar: List Styling */
+#navbar ul {
+    display: flex;
+}
+
+#navbar::before {
+    content: "";
+    background-color: black;
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#navbar ul li {
+    /* color: green; */
+    list-style: none;
+    font-size: 1.4rem;
+}
+
+#navbar ul li a {
+    display: block;
+    padding: 2px 20px;
+    margin: 5px;
+
+    color: white;
+    border: 3px solid transparent;
+    /* border: 2px solid red; */
+    border-radius: 35px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    /* border: 2px solid transparent; */
+    border: 3px solid black;
+    background-color: white;
+    color: black;
+}
+
+/* Home-Section */
+#home {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    padding: 25px 450px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Home-Section: Psuedo Selector */
+#home::before {
+    content: "";
+    background: url(../bg01.jpg) no-repeat center center/cover;
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 75%;
+
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#home h1 {
+    color: white;
+    font-family: 'Lobster', 'Baloo Bhai 2', cursive;
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+#home p {
+    color: white;
+    font-family: 'Bree Serif', cursive;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#home .btn:hover {
+    background-color: #000000d8;
+}
+
+
+/* Services Section */
+#services {
+    display: flex;
+    /* border: 3px solid yellow; */
+
+    margin: 10px;
+    padding: 25px;
+
+}
+
+#services .box {
+    margin: 10px;
+    padding: 10px;
+
+    border: 3px solid brown;
+    border-radius: 10px;
+
+    background-color: aliceblue;
+}
+
+#services .box img {
+    height: 120px;
+    display: block;
+    margin: auto;
+}
+
+
+/* Clients-Section */
+#clients-section {
+    position: relative;
+    /* relative se utni jageh lega jitni chahiye */
+    height: 390px;
+}
+
+#clients-section::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../dosa-thaali.jpg);
+    opacity: 0.9;
+    z-index: -1;
+    ;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-item {
+    padding: 20px;
+}
+
+#clients img {
+    height: 100px;
+}
+
+
+/* Contact Us */
+#contact {
+    position: relative;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url(../img/food-delivery.png) no-repeat center center/cover;
+
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 25px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    
+    font-size: 1.1rem;
+
+    border-radius: 10px;
+
+}
+
+#contact form{
+    width: 40%;
+}
+#contact label{
+    font-size: 1.2rem;
+    font-family: 'Bree Serif', cursive;
+}
+/* Footer */
+footer {
+    background-color: black;
+    color: white;
+    padding: 3px 5px;
+}
+
+
+/* Utility Class */
+.h-primary {
+    font-family: 'Lobster', 'Baloo Bhai 2', cursive;
+    font-size: 3rem;
+    padding: 20px 20px;
+}
+
+.h-secondary {
+    font-family: 'Lobster', 'Baloo Bhai 2', cursive;
+    font-size: 2rem;
+    padding: 20px 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn {
+    margin: 16px;
+    padding: 8px 5px;
+
+    border: 3px solid black;
+    border-radius: 15px;
+
+    background-color: #0000006e;
+
+    font-family: 'Baloo Bhai 2', cursive;
+    font-weight: bold;
+    font-size: 1.4rem;
+    color: white;
+
+    cursor: pointer;
+}
